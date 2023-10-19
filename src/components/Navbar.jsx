@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   return (
@@ -9,10 +10,54 @@ const Navbar = () => {
             coinbase
           </a>
           <ul>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <Link
+              activeClass="active"
+              to="test1"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              //   onSetActive={handleSetActive}
+            >
+              {" "}
+              <a href="#">Home</a>
+            </Link>
+            <Link
+              activeClass="active"
+              to="market"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+              //   onSetActive={handleSetActive}
+            >
+              {" "}
+              <a href="#">Market</a>
+            </Link>
+            <Link
+              activeClass="active"
+              to="chooseus"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+
+              //   onSetActive={handleSetActive}
+            >
+              <a href="#">Choose Us</a>
+            </Link>
+            <Link
+              activeClass="active"
+              to="joinus"
+              spy={true}
+              smooth={true}
+              offset={50}
+              duration={500}
+
+              //   onSetActive={handleSetActive}
+            >
+              <a href="#">Join</a>
+            </Link>
           </ul>
           <span>
             <svg

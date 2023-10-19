@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="joinus">
       <div className="footer-container">
         <div className="footer-socials">
           <svg
