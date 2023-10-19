@@ -2,7 +2,7 @@ import React from "react";
 
 const ChooseUs = () => {
   return (
-    <section id="choose-us">
+    <section id="choose-us" className="section-large-margin">
       <div className="container">
         <h1>WHY CHOOSE US</h1>
 

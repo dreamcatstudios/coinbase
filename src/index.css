@@ -24,10 +24,20 @@ body {
   padding: 0 2rem;
 }
 
-section {
-  margin: 7rem 0;
+.section-small-margin {
+  margin: 10rem 0;
 }
 
+.section-large-margin {
+  margin: 20rem 0;
+}
+
+.gradient-text {
+  /* background-clip: text !important; */
+  -webkit-background-clip: text !important;
+  background-image: linear-gradient(25deg, #2600fc, #ff00ea) !important;
+  color: transparent;
+}
 /* Utility Classes End*/
 
 /* Navbar CSS*/
@@ -81,7 +91,6 @@ section {
 
 .hero-text h1 {
   font-size: 10rem;
-  color: #fff;
 }
 
 .hero-text img {
@@ -105,6 +114,25 @@ section {
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+
+.hero-crypto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 6rem;
+}
+
+.hero-crypto div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+}
+.hero-crypto img {
+  width: 35%;
 }
 
 @keyframes coin {
@@ -199,22 +227,21 @@ section {
 
 .join-us-text h1 {
   font-size: 10rem;
-  color: #fff;
 }
 
 .join-us-text img {
-  max-width: 7%;
+  max-width: 10%;
   position: absolute;
 }
 
 .join-us-text img:nth-child(1) {
   top: 0;
-  left: 0;
+  left: -10%;
   animation: coin 2.5s infinite ease-in-out 1s;
 }
 .join-us-text img:nth-last-child(1) {
   top: 0;
-  right: 0;
+  right: -10%;
   animation: coin 2.5s infinite ease-in-out 1s;
 }
 
@@ -243,7 +270,7 @@ section {
 footer {
   background-image: url("https://coindom-crypto-search.vercel.app/static/media/footer-bg.e33c036e05f949cf81cb.png");
   background-size: cover;
-  height: 35rem;
+  height: 25rem;
   background-position: 50%;
   justify-content: center;
 }
@@ -315,6 +342,7 @@ footer {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
+  background: linear-gradient(25deg, #2600fc, #ff00ea);
 }
 
 .crypto-table {
@@ -349,3 +377,95 @@ footer {
 }
 
 /* Table CSS End */
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+  /* Hero Media Queries */
+  .hero-text h1 {
+    font-size: 6rem;
+  }
+  .hero-text img {
+    max-width: 15%;
+  }
+  .hero-crypto div {
+    font-size: 1.5rem;
+  }
+
+  .hero-text img:nth-child(1) {
+    display: none;
+  }
+  .hero-text img:nth-last-child(1) {
+    display: none;
+  }
+  /* Hero Media Queries Ends */
+
+  /* Benefite Media Queries */
+
+  .benefits-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .benefit-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .benefit-box h2 {
+    font-size: 2.5rem;
+  }
+  .benefit-box p {
+    font-size: 1.5rem;
+  }
+  .benefit-img img {
+    max-width: 50%;
+  }
+  .join-us-text h1 {
+    font-size: 6rem;
+  }
+  .join-us-text img {
+    max-width: 20%;
+  }
+  .crypto-coin {
+    font-size: 1.8rem;
+  }
+  .crypto-list span img {
+    max-width: 20%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 4rem;
+  }
+  .hero-text img {
+    max-width: 25%;
+  }
+  .hero-crypto div {
+    font-size: 1.2rem;
+  }
+  .benefit-box h2 {
+    font-size: 2rem;
+  }
+  .benefit-box p {
+    font-size: 1.2rem;
+  }
+  .benefit-img img {
+    max-width: 70%;
+  }
+  .join-us-text h1 {
+    font-size: 4rem;
+  }
+  .join-us-text img {
+    max-width: 30%;
+  }
+  .crypto-coin {
+    font-size: 1.5rem;
+  }
+  .crypto-list span img {
+    max-width: 30%;
+  }
+}
