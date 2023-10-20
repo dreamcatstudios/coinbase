@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-const Homepage = () => {
+const Hero = () => {
   const data = useSelector((state) => state.cryptodata.data); // Access the correct slice of state
 
   return (
@@ -44,4 +44,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default Hero;

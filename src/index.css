@@ -32,6 +32,13 @@ body {
   margin: 20rem 0;
 }
 
+.section-large-margin h1:nth-child(1) {
+  font-size: 8rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
 .gradient-text {
   /* background-clip: text !important; */
   -webkit-background-clip: text !important;
@@ -367,6 +374,10 @@ footer {
   border-bottom: 1px solid #fff;
   padding: 3rem 0;
 }
+.crypto-coin:hover {
+  background-color: #200840;
+  cursor: pointer;
+}
 
 .crypto-coin p:nth-child(3) {
   color: red;
@@ -375,7 +386,7 @@ footer {
 .crypto-list span {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 
 .crypto-list span img {
@@ -396,7 +407,7 @@ footer {
   align-items: center;
   color: #f3f2f4;
   display: flex;
-  height: 100vh;
+  height: 90vh;
   justify-content: center;
   position: relative;
   text-align: center;
@@ -451,6 +462,11 @@ footer {
   overflow-y: auto;
   text-align: left;
   width: 100%;
+}
+
+.description a {
+  color: #0ecb81;
+  text-decoration: none;
 }
 
 /*  */

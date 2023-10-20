@@ -1,23 +1,17 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
-import ChooseUs from "./components/ChooseUs";
-import Footer from "./components/Footer";
-import Homepage from "./components/Homepage";
-import JoinUs from "./components/JoinUs";
+import Homepage from "./pages/Homepage";
+import CoinPage from "./pages/CoinPage";
 import Navbar from "./components/Navbar";
-import Table from "./components/Table";
+import Footer from "./components/Footer";
+
+const route = createBrowserRouter([
+  { path: "/", element: <Homepage /> },
+  { path: "/coin/:id", element: <CoinPage /> },
+]);
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Homepage />
-      <Table />
-      <ChooseUs />
-
-      <JoinUs />
-      <Footer />
-    </>
-  );
+  return <RouterProvider router={route} />;
 }
 
 export default App;

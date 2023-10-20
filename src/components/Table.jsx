@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setData } from "../store/store"; // Import the setData action
+import { Link } from "react-router-dom";
 
 const Table = () => {
   const dispatch = useDispatch();
@@ -34,17 +35,32 @@ const Table = () => {
             <div className="table-header-item">24h Change</div>
             <div className="table-header-item">Market Cap</div>
           </div>
+
           <div className="crypto-list">
             {data.map((crypto, index) => (
-              <a className="crypto-coin" key={index}>
-                <span>
-                  <img src={crypto.image} alt={crypto.name}></img>
-                  {crypto.name}
-                </span>
-                <p>${crypto.current_price}</p>
-                <p>{crypto.price_change_percentage_24h}%</p>
-                <p>${crypto.market_cap}</p>
-              </a>
+              <Link
+                style={{ textDecoration: "none" }}
+                to={`/coin/${crypto.id}`}
+              >
+                <a className="crypto-coin" key={index}>
+                  <span>
+                    <img src={crypto.image} alt={crypto.name}></img>
+                    {crypto.name}
+                  </span>
+                  <p>${crypto.current_price}</p>
+                  <p
+                    style={
+                      crypto.price_change_percentage_24h > 0
+                        ? { color: "#0ecb81" }
+                        : { color: "red" }
+                    }
+                  >
+                    {crypto.price_change_percentage_24h.toFixed(2)}%
+                  </p>
+
+                  <p>${crypto.market_cap}</p>
+                </a>
+              </Link>
             ))}
           </div>
         </div>

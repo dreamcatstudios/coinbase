@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <nav>
         <div className="navbar">
-          <a href="#" className="logo">
+          <a href="/" className="logo">
             coinbase
           </a>
           <ul>
