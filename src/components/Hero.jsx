@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   const data = useSelector((state) => state.cryptodata.data); // Access the correct slice of state
@@ -38,6 +39,11 @@ const Hero = () => {
               </div>
             ))}
           </div>
+          <Link to="market" smooth={true} duration={500}>
+            <a id="hero-btn" href="#" className="footer-btn">
+              See Prices
+            </a>
+          </Link>
         </div>
       </div>
     </section>

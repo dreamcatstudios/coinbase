@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
+  const [mobileMenu, setMobileMenu] = useState(false);
+
+  const handleMenuClick = () => {
+    setMobileMenu(!mobileMenu);
+  };
   return (
     <>
       <nav>
@@ -9,7 +14,7 @@ const Navbar = () => {
           <a href="/" className="logo">
             coinbase
           </a>
-          <ul>
+          <ul id="desktop-nav">
             <Link
               activeClass="active"
               to="test1"
@@ -107,11 +112,87 @@ const Navbar = () => {
               <path d="M4 12l16 0"></path>
               <path d="M4 18l16 0"></path>
             </svg>
+            <svg
+              onClick={handleMenuClick}
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="hamburger-menu"
+            >
+              <path d="M4 6l16 0"></path>
+              <path d="M4 12l16 0"></path>
+              <path d="M4 18l16 0"></path>
+            </svg>
           </span>
         </div>
       </nav>
 
-      <div className="mobile-nav"></div>
+      <div className={mobileMenu ? "mobile-nav-active" : "mobile-nav-closed"}>
+        <svg
+          onClick={handleMenuClick}
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="close-mobile"
+        >
+          <path d="M18 6l-12 12"></path>
+          <path d="M6 6l12 12"></path>
+        </svg>
+        <ul>
+          <Link
+            onClick={handleMenuClick}
+            to="home"
+            smooth={true}
+            duration={500}
+          >
+            <li>
+              <a href="#home">Home</a>
+            </li>
+          </Link>
+          <Link
+            onClick={handleMenuClick}
+            to="market"
+            smooth={true}
+            duration={500}
+          >
+            <li>
+              <a href="#market">Market</a>
+            </li>
+          </Link>
+          <Link
+            onClick={handleMenuClick}
+            to="chooseus"
+            smooth={true}
+            duration={500}
+          >
+            <li>
+              <a href="#choose-us">Choose Us</a>
+            </li>
+          </Link>
+          <Link
+            onClick={handleMenuClick}
+            to="join-us"
+            smooth={true}
+            duration={500}
+          >
+            <li>
+              <a href="#join">Join</a>
+            </li>
+          </Link>
+        </ul>
+      </div>
     </>
   );
 };

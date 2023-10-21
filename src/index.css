@@ -87,6 +87,7 @@ body {
   display: flex;
   gap: 20px;
   color: #fff;
+  cursor: pointer;
 }
 
 .navbar span svg:nth-child(3) {
@@ -420,11 +421,11 @@ footer {
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
-  width: 30%;
+  max-width: 30%;
 }
 .coin-content__img-side img {
-  height: 22rem;
-  width: 22rem;
+  max-height: 22rem;
+  max-width: 22rem;
 }
 .coin-content__img-side h2 {
   font-size: 3.3rem;
@@ -473,8 +474,192 @@ footer {
 
 /* Media Queries */
 
-@media only screen and (max-width: 768px) {
+/* For small screens (e.g., smartphones) */
+@media only screen and (max-width: 767px) {
+  /* CSS rules for small screens */
+
+  .coin-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+  }
+  .coin-content__img-side {
+    border-right: none;
+  }
+
+  .coin-content__img-side img {
+    max-width: 60%;
+  }
+  .coin-content__text-side__symbol {
+    display: none;
+  }
+  .numb {
+    font-size: 2rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    justify-content: center;
+  }
+
+  .description p {
+    width: 100%;
+    overflow: scroll;
+  }
+
+  #desktop-nav {
+    display: none;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7rem;
+  }
+
   /* Hero Media Queries */
+  .hero-text h1 {
+    font-size: 7rem;
+    text-align: center;
+    line-height: 7.5rem;
+  }
+
+  .hero-text img {
+    max-width: 15%;
+  }
+  .hero-crypto div {
+    font-size: 1.5rem;
+  }
+  .hero-crypto {
+    display: none;
+  }
+  .hero-text img:nth-child(1) {
+    display: none;
+  }
+  .hero-text img:nth-last-child(1) {
+    display: none;
+  }
+
+  .mobile-nav-closed {
+    display: flex;
+    align-items: center;
+    background-color: #f3f2f4;
+    color: #0f051d;
+    font-size: 3rem;
+    height: 100vh;
+    justify-content: center;
+    left: -100%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    transition: all 0.4s ease-in-out;
+    width: 100%;
+    z-index: 9999999;
+  }
+
+  .mobile-nav-active {
+    display: flex;
+    align-items: center;
+    background-color: #f3f2f4;
+    color: #0f051d;
+    font-size: 3rem;
+    height: 100vh;
+    justify-content: center;
+    left: -100%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    transition: all 0.4s ease-in-out;
+    width: 100%;
+    z-index: 9999999;
+    left: 0;
+  }
+
+  .mobile-nav-active ul,
+  .mobile-nav-closed ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 3rem;
+  }
+
+  .mobile-nav-active svg,
+  .mobile-nav-closed svg {
+    right: 3%;
+    top: 5%;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .mobile-nav-active ul a,
+  .mobile-nav-closed ul a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  /* Hero Media Queries Ends */
+
+  /* Benefit Media Queries */
+
+  .benefits-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .benefit-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 5rem;
+  }
+  .benefit-box h2 {
+    font-size: 2.5rem;
+  }
+  .benefit-box p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .benefit-img {
+    max-width: 50%;
+    align-self: center;
+  }
+  .join-us-text h1 {
+    font-size: 6rem;
+  }
+  .join-us-text img {
+    max-width: 20%;
+  }
+  .crypto-coin {
+    font-size: 1.8rem;
+  }
+  .crypto-list span img {
+    max-width: 20%;
+  }
+  .join-us-text img {
+    display: none;
+  }
+  /* Benefit Media Queries Ends */
+}
+
+/* For medium-sized screens (e.g., tablets) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* CSS rules for medium-sized screens */
+
+  .mobile-nav-active,
+  .mobile-nav-closed {
+    display: none !important;
+  }
+
+  .navbar span svg:nth-child(4) {
+    display: none;
+  }
   .hero-text h1 {
     font-size: 6rem;
   }
@@ -528,37 +713,28 @@ footer {
   .crypto-list span img {
     max-width: 20%;
   }
+  .join-us-text img {
+    display: none !important;
+  }
+  #hero-btn {
+    display: none;
+  }
+  /* Hero Media Queries Ends */
 }
 
-@media only screen and (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 4rem;
+/* For large screens (e.g., desktops) */
+@media only screen and (min-width: 992px) {
+  /* CSS rules for large screens */
+
+  .navbar span svg:nth-child(4) {
+    display: none;
   }
-  .hero-text img {
-    max-width: 25%;
+
+  .mobile-nav-active,
+  .mobile-nav-closed {
+    display: none !important;
   }
-  .hero-crypto div {
-    font-size: 1.2rem;
-  }
-  .benefit-box h2 {
-    font-size: 2rem;
-  }
-  .benefit-box p {
-    font-size: 1.2rem;
-  }
-  .benefit-img img {
-    max-width: 70%;
-  }
-  .join-us-text h1 {
-    font-size: 4rem;
-  }
-  .join-us-text img {
-    max-width: 30%;
-  }
-  .crypto-coin {
-    font-size: 1.5rem;
-  }
-  .crypto-list span img {
-    max-width: 30%;
+  #hero-btn {
+    display: none;
   }
 }
