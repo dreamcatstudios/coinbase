@@ -25,8 +25,8 @@ const Table = () => {
   }, []);
 
   return (
-    <section id="market" className="section-small-margin">
-      <div className="container">
+    <section id="market" className="section-small-margin scroll">
+      <div className="container ">
         <h1>Market Update</h1>
         <div className="crypto-table">
           <div className="table-header">

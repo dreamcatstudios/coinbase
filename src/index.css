@@ -18,6 +18,10 @@ body {
 
 /* Utility Classes */
 
+.scroll {
+  overflow: scroll;
+}
+
 .sweet-loading {
   position: absolute;
   top: 50%;
@@ -363,6 +367,7 @@ footer {
 .table-header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
   padding: 2rem;
   width: 100%;
   color: #fff;
@@ -374,8 +379,7 @@ footer {
 }
 
 .crypto-table {
-  width: 100%;
-  overflow: scroll;
+  min-width: 15rem !important;
 }
 
 .crypto-coin {
@@ -388,6 +392,7 @@ footer {
   text-align: center;
   border-bottom: 1px solid #fff;
   padding: 3rem 0;
+  gap: 2rem;
 }
 .crypto-coin:hover {
   background-color: #200840;
@@ -515,7 +520,6 @@ footer {
 
   .description p {
     width: 100%;
-    overflow: scroll;
   }
 
   #desktop-nav {
@@ -531,7 +535,7 @@ footer {
 
   /* Hero Media Queries */
   .hero-text h1 {
-    font-size: 7rem;
+    font-size: 5rem;
     text-align: center;
     line-height: 7.5rem;
   }
@@ -539,6 +543,7 @@ footer {
   .hero-text img {
     max-width: 15%;
   }
+
   .hero-crypto div {
     font-size: 1.5rem;
   }
