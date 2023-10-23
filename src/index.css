@@ -30,7 +30,7 @@ body {
 }
 #coinpage {
   background-image: linear-gradient(0deg, #0f051d 30%, #130749 70%);
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -40,6 +40,12 @@ body {
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 2rem;
+}
+.container-small {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0;
+  transform: translateY(-5%);
 }
 
 .section-small-margin {
@@ -199,6 +205,13 @@ body {
   display: flex;
   gap: 2rem;
   align-items: center;
+}
+
+.benefit-img {
+  /* align-self: center; */
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .benefit-box i {
@@ -475,6 +488,9 @@ footer {
   text-align: left;
   width: 100%;
 }
+.description p {
+  text-align: center;
+}
 
 .description a {
   color: #0ecb81;
@@ -500,6 +516,10 @@ footer {
   }
   .coin-content__img-side {
     border-right: none;
+  }
+
+  .coin-content__text-side {
+    padding: 0 !important;
   }
 
   .coin-content__img-side img {

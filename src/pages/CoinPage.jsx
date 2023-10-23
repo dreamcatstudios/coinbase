@@ -40,7 +40,7 @@ const CoinPage = () => {
     <>
       <Navbar />
       <section id="coinpage" >
-        <div className="container">
+        <div className="container-small">
           {loading ? ( // Render spinner when loading is true
             <div className="sweet-loading">
               <RingLoader css={override} size={150} color={"#123abc"} loading={loading} />
