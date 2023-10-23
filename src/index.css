@@ -379,7 +379,7 @@ footer {
 }
 
 .crypto-table {
-  min-width: 15rem !important;
+  min-width: 60rem !important;
 }
 
 .crypto-coin {
@@ -392,7 +392,7 @@ footer {
   text-align: center;
   border-bottom: 1px solid #fff;
   padding: 3rem 0;
-  gap: 2rem;
+  gap: 3rem;
 }
 .crypto-coin:hover {
   background-color: #200840;
@@ -535,7 +535,7 @@ footer {
 
   /* Hero Media Queries */
   .hero-text h1 {
-    font-size: 5rem;
+    font-size: 6rem !important;
     text-align: center;
     line-height: 7.5rem;
   }
@@ -569,7 +569,7 @@ footer {
     position: fixed;
     text-align: center;
     top: 0;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.25s ease-in-out;
     width: 100%;
     z-index: 9999999;
   }
@@ -586,7 +586,7 @@ footer {
     position: fixed;
     text-align: center;
     top: 0;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.25s ease-in-out;
     width: 100%;
     z-index: 9999999;
     left: 0;
